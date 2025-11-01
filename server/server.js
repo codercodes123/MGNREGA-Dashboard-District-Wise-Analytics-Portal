@@ -31,8 +31,13 @@ csvDataService.loadFromFile().catch((err) => {
 app.use(helmet()); // Security headers
 app.use(compression()); // Response compression
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  credentials: true
+  origin: [
+    'https://our-voice-our-rights-mgnrega-data.vercel.app',
+    'http://localhost:5173' // Keep local development support
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
