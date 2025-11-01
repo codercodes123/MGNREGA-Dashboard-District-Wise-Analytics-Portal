@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     const fetchTopDistricts = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL || '/api';
+        const apiUrl = 'https://mgnrega-dashboard-district-wise.onrender.com/api';
         const response = await axios.get(`${apiUrl}/maharashtra/top/5`);
         if (response.data.success && response.data.districts) {
           setTopDistricts(response.data.districts);
@@ -51,7 +51,7 @@ const Home = () => {
       
       if (location.state && location.district) {
         // Check if this location exists in our CSV data
-        const apiUrl = import.meta.env.VITE_API_URL || '/api';
+        const apiUrl = 'https://mgnrega-dashboard-district-wise.onrender.com/api';
         const checkResponse = await axios.get(`${apiUrl}/location-check`, {
           params: {
             state: location.state,

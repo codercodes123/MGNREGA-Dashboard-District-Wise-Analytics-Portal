@@ -105,7 +105,7 @@ const normalizeDistrictName = (districtName) => {
  */
 export const reverseGeocode = async (latitude, longitude) => {
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+    const apiUrl = 'https://mgnrega-dashboard-district-wise.onrender.com/api';
     
     console.log('🌍 Calling backend geolocation API...');
     

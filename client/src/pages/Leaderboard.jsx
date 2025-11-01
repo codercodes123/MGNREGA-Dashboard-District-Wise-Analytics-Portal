@@ -19,7 +19,7 @@ const Leaderboard = () => {
 
   const fetchLeaderboard = async () => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || '/api';
+      const apiUrl = 'https://mgnrega-dashboard-district-wise.onrender.com/api';
       const response = await axios.get(`${apiUrl}/leaderboard`);
       
       // Handle new Maharashtra district format
