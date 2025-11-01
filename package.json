@@ -1,0 +1,38 @@
+{
+  "name": "mgnrega-performance-tracker",
+  "version": "1.0.0",
+  "description": "Full-stack MERN application for tracking MGNREGA district performance across India",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "start": "cd server && npm start",
+    "build": "cd client && npm run build",
+    "test": "cd server && npm test && cd ../client && npm test"
+  },
+  "keywords": [
+    "mgnrega",
+    "rural-employment",
+    "data-visualization",
+    "mern-stack",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mgnrega-tracker.git"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.19.2",
+    "node-cron": "^4.2.1"
+  }
+}
